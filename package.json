@@ -1,0 +1,38 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClompenNico/password-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClompenNico/password-generator/issues"
+  },
+  "homepage": "https://github.com/ClompenNico/password-generator#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-csslint": "^1.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jshint": "^2.9.5"
+  }
+}
