@@ -29,12 +29,17 @@ const PATHS = {
 gulp.task("default", function(){
     //watch
     let htmlWatcher = gulp.watch(PATHS.HTML.SRC, ['copy-html']);
+    let cssWatcher = gulp.watch('./src/**/*.scss', ['css']);
+    let jsWatcher = gulp.watch(PATHS.JS.SRC, ['js']);
+
+    /*
     htmlWatcher.on('change', function(event){
         console.log("File " + event.path + " was " + event.type);
     })
 
     gulp.watch(PATHS.JS.SRC, ['js']);
     gulp.watch(PATHS.CSS.SRC, ['css']);
+    */
 });
 
 gulp.task("js", function(){
@@ -44,8 +49,9 @@ gulp.task("js", function(){
 });
 
 gulp.task("css", function(){
-    gulp.src(PATHS.CSS.SRC)
-    .pipe(concat("app.css"))
+    gulp.src("./src/css/screen.scss")
+    .pipe(sass())
+    .pipe(cleanCSS())
     .pipe(gulp.dest(PATHS.CSS.DIST));
 
 });
